@@ -102,20 +102,21 @@ strong {
 }
 
 h1 {
-	line-height: 0.5rem;
+	line-height: 1rem;
 	margin: 0 0 0rem;
 	padding: 0px 0px;
 	text-align: center;
 	text-transform: uppercase;
 	margin-top: 1.5rem;
+	margin-bottom: 3rem;
 }
 h2 {
 	line-height: 1rem;
-	margin-bottom: 1rem;
 	padding: 0 30px;
 	text-align: center;
 	text-transform: uppercase;
-	margin-top: 3rem
+	margin-top: 1rem;
+	margin-bottom: 3rem;
 }
 h3 {
 }
