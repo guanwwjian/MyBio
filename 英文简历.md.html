@@ -396,7 +396,7 @@ pre.editor-colors.is-focused .line.cursor-line {
     
 <h2>Jim Guan/关键</h2>
 <ul>
-<li><strong>Job Intension</strong>: Related to <strong>Algorithm</strong>, <strong>Big Data</strong> or <strong>Python Development</strong></li>
+<li><strong>Job Intension</strong>: Related to <strong>Big Data</strong>, <strong>Algorithm</strong> or <strong>Python Development</strong></li>
 <li><strong>Mobile</strong>: 15624901008</li>
 <li><strong>Email</strong>: <a href="mailto:guanwwjian@163.com">guanwwjian@163.com</a></li>
 </ul>
@@ -478,25 +478,25 @@ table th:first-of-type {
 <h4>“ToptenToday APP” CTR Estimation Model for Personalized Push notification</h4>
 <ul>
 <li>Function: Calculate the CTR estimated score for the user-article pair</li>
-<li>Using programming languages: Python, Shell</li>
-<li>Using the Wide&amp;Deep model built on Tensorflow</li>
-<li>Using Spark to distributed preprocess the training data, extract feature and process features into TFRecord format</li>
+<li>Using programming languages: <strong>Python, Shell</strong></li>
+<li>Using the <strong>Wide&amp;Deep</strong> model built on <strong>Tensorflow</strong></li>
+<li>Using <strong>Spark</strong> to distributed preprocess the training data, extract feature and process features into <strong>TFRecord</strong> format</li>
 <li>Training model with GPU and dynamic learning rate</li>
 <li>Calculate the CTR estimated score by loading tensorflow model in the Spark node, and there is no need to modify the code of prediction process when the Tensorflow model structure changes</li>
 </ul>
 <h4>“ToptenToday APP” Personalized Push Service</h4>
 <ul>
 <li>Function: After receiving the push command, push the article with the highest CTR estimated score for each user, aggregate the users according to the article, and submit the push user collection of each article to the push service.</li>
-<li>Using programming languages: Python3</li>
+<li>Using programming languages: <strong>Python3</strong></li>
 <li>Workflow: Maintain a priority queue for each user, receive the article score calculated by the CTR estimation model, and insert the article score into the priority queue of the corresponding user. The article with the highest score is at the head of the priority queue. Whenever a push command is received, every priority queue’s head article is poped, aggregated by article and submitted for push.</li>
-<li>Using Redis’s Sorted Set structure as priority queue</li>
-<li>Restful interface service using Sanic framework</li>
-<li>In order to guarantee the push speed, the producer-consumer pattern provided by the Celery framework is used to get the top article of each user in a distributed manner, so that the sending speed reaches 1 million users/minute.</li>
+<li>Using <strong>Redis</strong>’s <strong>Sorted Set</strong> structure as priority queue</li>
+<li>Restful interface service using <strong>Sanic</strong> framework</li>
+<li>In order to guarantee the push speed, the producer-consumer pattern provided by the <strong>Celery</strong> framework is used to get the top article of each user in a distributed manner, so that the sending speed reaches 1 million users/minute.</li>
 </ul>
 <h4>“ToptenToday APP” general statistical process based on pingback receipt log</h4>
 <ul>
 <li>Function: According to the configuration, perform minute-level PV and day-level UV statistics on the “ToptenToday APP” pingback receipt log. This process supports filtering and classifying logs according to multiple different field dimensions.</li>
-<li>Using programming languages: Python, Shell, SQL</li>
+<li>Using programming languages: <strong>Python, Shell, SQL</strong></li>
 <li>Advantage:
 <ul>
 <li>Simple configuration: only one line of configuration items is required for each statistical dimension combination in the configuration file</li>
@@ -506,22 +506,22 @@ table th:first-of-type {
 </li>
 <li>Architecture:
 <ul>
-<li>Hadoop Streaming cleans the data</li>
+<li><strong>Hadoop Streaming</strong> cleans the data</li>
 <li>Load cleaned data with Hive</li>
-<li>Generate SQL statements based on the configuration file and submit to Hive</li>
-<li>Insert Hive statistics into Mysql</li>
-<li>Visualize the statistics in Mysql using Redash</li>
+<li>Generate SQL statements based on the configuration file and submit to <strong>Hive</strong></li>
+<li>Insert Hive statistics into <strong>Mysql</strong></li>
+<li>Visualize the statistics in Mysql using <strong>Redash</strong></li>
 </ul>
 </li>
 </ul>
 <h4>Maintenance text search personalized recomend process named “Guesswant” in “Sogou Search APP”</h4>
 <ul>
 <li>Introduction: Responsible for maintaining the existing “Guesswant” service, which is to recommend personalized search query to enhance the user experience.</li>
-<li>Using programming languages: C++, Python, Shell</li>
-<li>The offline process uses the CF(collaborative filtering) algorithm to calculate the “Search History - Recommended Words mapping”, which is based on the user’s search history in the pingback receipt log.</li>
+<li>Using programming languages: <strong>C++, Python, Shell</strong></li>
+<li>The offline process uses the <strong>CF</strong>(collaborative filtering) algorithm to calculate the “Search History - Recommended Words mapping”, which is based on the user’s search history in the pingback receipt log.</li>
 <li>Using Redis to store the “Search History - Recommended Words mapping”</li>
 <li>The online Restful interface is developed in C++. It is responsible for receiving user’s search history, and returning the corresponding recommendation search query according to “Search History - Recommended Words mapping”.</li>
-<li>Using the AC automaton algorithm as blacklist fuzzy matching method</li>
+<li>Using the <strong>AC automaton</strong> algorithm as blacklist fuzzy matching method</li>
 </ul>
 
   </body>

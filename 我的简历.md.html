@@ -396,7 +396,7 @@ pre.editor-colors.is-focused .line.cursor-line {
     
 <h2>关键/Jim Guan</h2>
 <ul>
-<li><strong>求职意向</strong>：算法相关、大数据相关、Python开发</li>
+<li><strong>求职意向</strong>：大数据相关、算法相关、Python开发</li>
 <li><strong>手机</strong>：15624901008</li>
 <li><strong>邮箱</strong>：guanwwjian@163.com</li>
 </ul>
@@ -470,29 +470,28 @@ table th:first-of-type {
 <li>推送相关的客户端、前端、后端、运营的协调以及问题排查工作</li>
 <li>参与推送通道调研及推送整体架构设计</li>
 </ul>
-<div style="page-break-after: always;"></div>
 <h4>“今日十大热点”个性化推送CTR预估模型</h4>
 <ul>
 <li>功能：计算用户-文章对的CTR预估评分</li>
-<li>使用编程语言：Python、Shell</li>
-<li>使用基于Tensorflow构建的Wide&amp;Deep模型</li>
-<li>使用Spark进行训练数据的分布式预处理，完成特征提取并将特征处理成TFRecord格式</li>
+<li>使用编程语言：<strong>Python、Shell</strong></li>
+<li>使用基于<strong>Tensorflow</strong>构建的<strong>Wide&amp;Deep</strong>模型</li>
+<li>使用<strong>Spark</strong>进行训练数据的分布式预处理，完成特征提取并将特征处理成<strong>TFRecord</strong>格式</li>
 <li>使用GPU训练模型，训练过程使用了动态学习率</li>
-<li>使用Spark加载tensorflow模型实现分布式CTR评分预测流程，当Tensorflow模型结构发生变化时，无需修改预测流程代码</li>
+<li>使用Spark加载Tensorflow模型实现分布式CTR评分预测流程，当Tensorflow模型结构发生变化时，无需修改预测流程代码</li>
 </ul>
 <h4>“今日十大热点”个性化推送服务</h4>
 <ul>
 <li>功能：收到推送指令后，为每一个用户选择目前CTR预估评分最高的文章，根据文章聚合用户，并把每一篇文章的推送用户集合提交至推送平台进行推送</li>
-<li>使用编程语言：Python3</li>
+<li>使用编程语言：<strong>Python3</strong></li>
 <li>工作流程：为每个用户维护一个优先队列，接收CTR预估模型计算的文章评分，并将该文章评分插入到对应用户的优先队列中，评分最高的文章在队首。每当收到推送指令时，取出每个用户的队首文章，按文章聚合提交推送</li>
-<li>优先队列使用Redis的Sorted Set结构实现</li>
-<li>Restful接口服务使用Python3下的Sanic框架</li>
-<li>为了保证推送速度，使用Celery框架提供的生产者-消费者模式来分布式获取每个用户的队首元素，使发送速度达到了100万用户/分钟</li>
+<li>优先队列使用<strong>Redis</strong>的<strong>Sorted Set</strong>结构实现</li>
+<li>Restful接口服务使用Python3下的<strong>Sanic</strong>框架</li>
+<li>为了保证推送速度，使用<strong>Celery</strong>框架提供的生产者-消费者模式来分布式获取每个用户的队首元素，使发送速度达到了100万用户/分钟</li>
 </ul>
 <h4>“今日十大热点”pingback回执日志通用统计流程</h4>
 <ul>
 <li>功能：根据配置，对“今日十大热点”pingback日志进行分钟级PV和天级UV统计，该流程支持按多个不同字段维度对日志进行筛选和分类</li>
-<li>使用编程语言：Python、Shell、SQL</li>
+<li>使用编程语言：<strong>Python、Shell、SQL</strong></li>
 <li>优势：
 <ul>
 <li>配置简单：配置文件中每种统计维度组合只需要一行配置项</li>
@@ -502,22 +501,22 @@ table th:first-of-type {
 </li>
 <li>架构：
 <ul>
-<li>Hadoop Streaming对数据进行清洗</li>
-<li>使用Hive加载清洗好的数据</li>
+<li>使用<strong>Hadoop Streaming</strong>对数据进行清洗</li>
+<li>使用<strong>Hive</strong>加载清洗好的数据</li>
 <li>根据配置文件生成SQL语句并提交至Hive</li>
-<li>将Hive的统计结果插入Mysql</li>
-<li>使用Redash对Mysql中的统计结果进行可视化</li>
+<li>将Hive的统计结果插入<strong>Mysql</strong></li>
+<li>使用<strong>Redash</strong>对Mysql中的统计结果进行可视化</li>
 </ul>
 </li>
 </ul>
 <h4>“搜狗搜索”文字搜索个性化“猜你想搜”个性化后端流程维护</h4>
 <ul>
 <li>简介：负责维护已有的“猜你想搜”服务，猜你想搜就是对用户的搜索词进行个性化推荐，以提升用户使用体验</li>
-<li>使用编程语言：C++、Python、Shell</li>
-<li>线下流程根据用户搜索pingback日志使用协同过滤算法计算“搜索历史-推荐词”映照表</li>
-<li>搜索历史-推荐词映照表以及用户搜索历史存储在Redis当中</li>
+<li>使用编程语言：<strong>C++、Python、Shell</strong></li>
+<li>线下流程根据用户搜索pingback日志使用<strong>协同过滤</strong>算法计算“搜索历史-推荐词”映照表</li>
+<li>搜索历史-推荐词映照表以及用户搜索历史存储在<strong>Redis</strong>当中</li>
 <li>线上Restful接口使用C++开发，负责接收pingback记录用户搜索历史，以及根据搜索历史查询“搜索历史-推荐词”映照表，并把对应的推荐词返回给用户客户端</li>
-<li>使用AC自动机算法配合运营黑名单进行黑名单模糊匹配</li>
+<li>使用<strong>AC自动机</strong>算法配合运营黑名单进行黑名单模糊匹配</li>
 </ul>
 
   </body>
