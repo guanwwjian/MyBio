@@ -396,7 +396,7 @@ pre.editor-colors.is-focused .line.cursor-line {
     
 <h2>关键/Jim Guan</h2>
 <ul>
-<li><strong>求职意向</strong>：大数据相关、算法相关</li>
+<li><strong>求职意向</strong>：大数据相关</li>
 <li><strong>手机</strong>：15624901008</li>
 <li><strong>邮箱</strong>：guanwwjian@163.com</li>
 </ul>
@@ -452,7 +452,7 @@ table th:first-of-type {
 </ul>
 </li>
 <li>IDE：<strong>vim</strong></li>
-<li>大数据处理：<strong>Spark</strong>（个性化推送模型预测流程）、<strong>Hadoop Streaming</strong>（日志清洗）、<strong>Hive</strong>（数据统计）</li>
+<li>大数据处理：<strong>Spark</strong>（个性化推送模型预测流程）、<strong>Hadoop Streaming</strong>（日志清洗）、<strong>Hive</strong>（数据统计）、<strong>Celery</strong></li>
 <li>机器学习：<strong>TensorFlow</strong>（Wide&amp;Deep CTR预估模型）、<strong>Spark ML</strong></li>
 <li>数据库：<strong>Redis、MySQL、SQLite</strong></li>
 <li>Restful接口服务: <strong>Sanic</strong>（个性化推送服务）</li>
@@ -463,6 +463,27 @@ table th:first-of-type {
 </ul>
 <hr>
 <h3>工作经历</h3>
+<h4>“今日十大热点”pingback回执日志通用统计流程</h4>
+<ul>
+<li>功能：根据配置，对“今日十大热点”pingback日志进行分钟级PV和天级UV统计，该流程支持按多个不同字段维度对日志进行筛选和分类</li>
+<li>使用编程语言：<strong>Python、Shell、SQL</strong></li>
+<li>优势：
+<ul>
+<li>配置简单：配置文件中每种统计维度组合只需要一行配置项</li>
+<li>配置项无需频繁修改：pingback日志中的已有字段新增字段值无需作出任何修改，新字段值的相关统计结果将自动列在统计表中</li>
+<li>维护简单：当日志中出现新的字段，只需对hive视图作出修改，无需建新的Hive表</li>
+</ul>
+</li>
+<li>架构：
+<ul>
+<li>使用<strong>Hadoop Streaming</strong>对数据进行清洗</li>
+<li>使用<strong>Hive</strong>加载清洗好的数据</li>
+<li>根据配置文件生成SQL语句并提交至Hive</li>
+<li>将Hive的统计结果插入<strong>Mysql</strong></li>
+<li>使用<strong>Redash</strong>对Mysql中的统计结果进行可视化</li>
+</ul>
+</li>
+</ul>
 <h4>搜狗“今日十大热点”通知栏推送流程技术侧负责人</h4>
 <ul>
 <li>通知栏推送简介：通知栏推送是APP提升用户留存的一项重要机制，对于已经安装APP的用户，有一定概率可以在APP进程被杀死的情况下展示通知栏消息，一旦用户点击通知栏消息，APP就会被激活至前台，从而引导用户使用APP</li>
@@ -491,27 +512,6 @@ table th:first-of-type {
 <li>优先队列使用<strong>Redis</strong>的<strong>Sorted Set</strong>结构实现</li>
 <li>Restful接口服务使用Python3下的<strong>Sanic</strong>框架</li>
 <li>为了保证推送速度，使用<strong>Celery</strong>框架提供的生产者-消费者模式来分布式获取每个用户的队首元素，使发送速度达到了100万用户/分钟</li>
-</ul>
-<h4>“今日十大热点”pingback回执日志通用统计流程</h4>
-<ul>
-<li>功能：根据配置，对“今日十大热点”pingback日志进行分钟级PV和天级UV统计，该流程支持按多个不同字段维度对日志进行筛选和分类</li>
-<li>使用编程语言：<strong>Python、Shell、SQL</strong></li>
-<li>优势：
-<ul>
-<li>配置简单：配置文件中每种统计维度组合只需要一行配置项</li>
-<li>配置项无需频繁修改：pingback日志中的已有字段新增字段值无需作出任何修改，新字段值的相关统计结果将自动列在统计表中</li>
-<li>维护简单：当日志中出现新的字段，只需对hive视图作出修改，无需建新的Hive表</li>
-</ul>
-</li>
-<li>架构：
-<ul>
-<li>使用<strong>Hadoop Streaming</strong>对数据进行清洗</li>
-<li>使用<strong>Hive</strong>加载清洗好的数据</li>
-<li>根据配置文件生成SQL语句并提交至Hive</li>
-<li>将Hive的统计结果插入<strong>Mysql</strong></li>
-<li>使用<strong>Redash</strong>对Mysql中的统计结果进行可视化</li>
-</ul>
-</li>
 </ul>
 <h4>“搜狗搜索”文字搜索个性化“猜你想搜”个性化后端流程维护</h4>
 <ul>

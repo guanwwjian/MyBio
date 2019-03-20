@@ -396,7 +396,7 @@ pre.editor-colors.is-focused .line.cursor-line {
     
 <h2>Jim Guan/关键</h2>
 <ul>
-<li><strong>Job Intension</strong>: Job related to <strong>Big Data</strong> or <strong>Algorithm</strong></li>
+<li><strong>Job Intension</strong>: Job related to <strong>Big Data</strong></li>
 <li><strong>Mobile</strong>: 15624901008</li>
 <li><strong>Email</strong>: <a href="mailto:guanwwjian@163.com">guanwwjian@163.com</a></li>
 </ul>
@@ -452,7 +452,7 @@ table th:first-of-type {
 </ul>
 </li>
 <li>IDE: <strong>vim</strong></li>
-<li>Big data processing: <strong>Spark</strong> (Using in prediction process for personalized push notification), <strong>Hadoop Streaming</strong> (Using in log cleaning), <strong>Hive</strong> (Using in data statistics)</li>
+<li>Big data processing: <strong>Spark</strong> (Using in prediction process for personalized push notification), <strong>Hadoop Streaming</strong> (Using in log cleaning), <strong>Hive</strong> (Using in data statistics), <strong>Celery</strong></li>
 <li>Machine Learning: <strong>TensorFlow</strong> (Using in Wide &amp; Deep CTR estimation Model), <strong>Spark ML</strong></li>
 <li>Database: <strong>Redis, MySQL, SQLite</strong></li>
 <li>Restful interface framework: <strong>Sanic</strong> (personalized push service)</li>
@@ -463,7 +463,28 @@ table th:first-of-type {
 </ul>
 <hr>
 <h3>Work Experience</h3>
-<h4>“ToptenToday APP” push notification process technical side person in charge</h4>
+<h4>“ToptenToday APP” general statistical process based on pingback receipt log</h4>
+<ul>
+<li>Function: According to the configuration, perform minute-level PV and day-level UV statistics on the “ToptenToday APP” pingback receipt log. This process supports filtering and classifying logs according to multiple different field dimensions.</li>
+<li>Using programming languages: <strong>Python, Shell, SQL</strong></li>
+<li>Advantage:
+<ul>
+<li>Simple configuration: only one line of configuration items is required for each statistical dimension combination in the configuration file</li>
+<li>The configuration item does not need to be modified frequently: configuration does not need to be modified when there is new value of existing field in the pingback receipt log. The related statistics of the new value will be listed in the statistics table automatically.</li>
+<li>Simple maintenance: When new fields appear in the log, modify the hive view without creating a new Hive table, and new fields will be supported</li>
+</ul>
+</li>
+<li>Architecture:
+<ul>
+<li><strong>Hadoop Streaming</strong> cleans the data</li>
+<li>Load cleaned data with Hive</li>
+<li>Generate SQL statements based on the configuration file and submit to <strong>Hive</strong></li>
+<li>Insert Hive statistics into <strong>Mysql</strong></li>
+<li>Visualize the statistics in Mysql using <strong>Redash</strong></li>
+</ul>
+</li>
+</ul>
+<h4>“ToptenToday APP” push notification process technical person in charge</h4>
 <ul>
 <li>Push notification introduction: Push notification is an important way for an APP to enhance user retention. For users who have installed APP, It’s possibly that the notification message will be displayed when the APP process is dead. Once the user clicks the notification bar. Message, the app will be activated to the foreground, guiding users to use the APP</li>
 <li>User scale:
@@ -496,27 +517,6 @@ table th:first-of-type {
 <li>Using <strong>Redis</strong>’s <strong>Sorted Set</strong> structure as priority queue</li>
 <li>Restful interface service using <strong>Sanic</strong> framework</li>
 <li>In order to guarantee the push speed, the producer-consumer pattern provided by the <strong>Celery</strong> framework is used to get the top article of each user in a distributed manner, so that the sending speed reaches 1 million users/minute.</li>
-</ul>
-<h4>“ToptenToday APP” general statistical process based on pingback receipt log</h4>
-<ul>
-<li>Function: According to the configuration, perform minute-level PV and day-level UV statistics on the “ToptenToday APP” pingback receipt log. This process supports filtering and classifying logs according to multiple different field dimensions.</li>
-<li>Using programming languages: <strong>Python, Shell, SQL</strong></li>
-<li>Advantage:
-<ul>
-<li>Simple configuration: only one line of configuration items is required for each statistical dimension combination in the configuration file</li>
-<li>The configuration item does not need to be modified frequently: configuration does not need to be modified when there is new value of existing field in the pingback receipt log. The related statistics of the new value will be listed in the statistics table automatically.</li>
-<li>Simple maintenance: When new fields appear in the log, modify the hive view without creating a new Hive table, and new fields will be supported</li>
-</ul>
-</li>
-<li>Architecture:
-<ul>
-<li><strong>Hadoop Streaming</strong> cleans the data</li>
-<li>Load cleaned data with Hive</li>
-<li>Generate SQL statements based on the configuration file and submit to <strong>Hive</strong></li>
-<li>Insert Hive statistics into <strong>Mysql</strong></li>
-<li>Visualize the statistics in Mysql using <strong>Redash</strong></li>
-</ul>
-</li>
 </ul>
 <h4>Maintenance text search personalized recomend process named “Guesswant” in “Sogou Search APP”</h4>
 <ul>
