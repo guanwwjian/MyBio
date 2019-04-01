@@ -696,14 +696,14 @@ pre.editor-colors .fold-marker:after {
     
 <h2>关键/Jim Guan</h2>
 <ul>
-<li><strong>求职意向</strong>：算法相关</li>
+<li><strong>求职意向</strong>：大数据相关</li>
 <li><strong>手机</strong>：15624901008</li>
 <li><strong>邮箱</strong>：guanwwjian@163.com</li>
 </ul>
 <hr>
 <h3>关于我</h3>
 <ul>
-<li>2年算法工程师工作经验（个性化推荐相关）</li>
+<li>2年大数据算法工程师工作经验（个性化推送相关）</li>
 <li>技术涉及面广</li>
 <li>创新能力强</li>
 </ul>
@@ -721,7 +721,7 @@ table th:first-of-type {
 <tr>
 <th style="text-align:left">2017.4至今</th>
 <th style="text-align:center">搜狗公司</th>
-<th style="text-align:right">算法工程师</th>
+<th style="text-align:right">大数据算法工程师</th>
 </tr>
 </thead>
 <tbody>
@@ -748,51 +748,21 @@ table th:first-of-type {
 <li>编程语言：
 <ul>
 <li>掌握：<strong>Python、Linux Shell</strong></li>
-<li>熟悉：<strong>Java、C++、SQL</strong></li>
+<li>熟悉：<strong>Java、SQL</strong></li>
 </ul>
 </li>
 <li>IDE：<strong>vim</strong></li>
+<li>大数据处理：<strong>Spark</strong>（个性化推送模型预测流程）、<strong>Hadoop Streaming</strong>（日志清洗）、<strong>Hive</strong>（数据统计）、<strong>Celery</strong></li>
 <li>机器学习：<strong>TensorFlow</strong>（Wide&amp;Deep CTR预估模型）、<strong>Spark ML</strong></li>
 <li>数据库：<strong>Redis、MySQL、SQLite</strong></li>
 <li>Restful接口服务: <strong>Sanic</strong>（个性化推送服务）</li>
 <li>Restful接口服务部署相关：<strong>nginx、PM2、expect</strong></li>
-<li>大数据处理：<strong>Spark</strong>（个性化推送模型预测流程）、<strong>Hadoop Streaming</strong>（日志清洗）、<strong>Hive</strong>（数据统计）</li>
 <li>数据统计及可视化：<strong>Kylin、Redash</strong></li>
 <li><strong>大学英语六级</strong></li>
 <li>了解国内推送技术现状及部分细节</li>
 </ul>
 <hr>
 <h3>工作经历</h3>
-<h4>搜狗“今日十大热点”通知栏推送流程技术侧负责人</h4>
-<ul>
-<li>通知栏推送简介：通知栏推送是APP提升用户留存的一项重要机制，对于已经安装APP的用户，有一定概率可以在APP进程被杀死的情况下展示通知栏消息，一旦用户点击通知栏消息，APP就会被激活至前台，从而引导用户使用APP</li>
-<li>用户规模 DAU：50万 推送目标用户总量500万</li>
-<li>制定了客户端的推送Payload接口格式</li>
-<li>制定了推送相关Pingback回执格式</li>
-<li>根据pingback回执日志，进行Push相关的统计工作</li>
-<li>根据pingback回执日志，收集并更新客户端Pushid集合</li>
-<li>推送相关的客户端、前端、后端、运营的协调以及问题排查工作</li>
-<li>参与推送通道调研及推送整体架构设计</li>
-</ul>
-<div style="page-break-after: always;"> </div>
-<h4>“今日十大热点”个性化推送CTR预估模型</h4>
-<ul>
-<li>功能：计算用户-文章对的CTR预估评分</li>
-<li>使用编程语言：<strong>Python、Shell</strong></li>
-<li>使用基于<strong>Tensorflow</strong>构建的<strong>Wide&amp;Deep</strong>模型</li>
-<li>使用<strong>Spark</strong>进行训练数据的分布式预处理，完成特征提取并将特征处理成<strong>TFRecord</strong>格式</li>
-<li>使用GPU训练模型，训练过程使用了动态学习率</li>
-<li>使用Spark加载Tensorflow模型实现分布式CTR评分预测流程，当Tensorflow模型结构发生变化时，无需修改预测流程代码</li>
-</ul>
-<h4>“今日十大热点”个性化推送服务</h4>
-<ul>
-<li>功能：收到推送指令后，为每一个用户选择目前CTR预估评分最高的文章，根据文章聚合用户，并把每一篇文章的推送用户集合提交至推送平台进行推送</li>
-<li>使用编程语言：<strong>Python3</strong></li>
-<li>工作流程：为每个用户维护一个优先队列，接收CTR预估模型计算的文章评分，并将该文章评分插入到对应用户的优先队列中，评分最高的文章在队首。每当收到推送指令时，取出每个用户的队首文章，按文章聚合提交推送</li>
-<li>优先队列使用<strong>Redis</strong>的<strong>Sorted Set</strong>结构实现</li>
-<li>Restful接口服务使用Python3下的<strong>Sanic</strong>框架</li>
-<li>为了保证推送速度，使用<strong>Celery</strong>框架提供的生产者-消费者模式来分布式获取每个用户的队首元素，使发送速度达到了100万用户/分钟</li>
-</ul>
 <h4>“今日十大热点”pingback回执日志通用统计流程</h4>
 <ul>
 <li>功能：根据配置，对“今日十大热点”pingback日志进行分钟级PV和天级UV统计，该流程支持按多个不同字段维度对日志进行筛选和分类</li>
@@ -813,6 +783,35 @@ table th:first-of-type {
 <li>使用<strong>Redash</strong>对Mysql中的统计结果进行可视化</li>
 </ul>
 </li>
+</ul>
+<h4>搜狗“今日十大热点”通知栏推送流程技术侧负责人</h4>
+<ul>
+<li>通知栏推送简介：通知栏推送是APP提升用户留存的一项重要机制，对于已经安装APP的用户，有一定概率可以在APP进程被杀死的情况下展示通知栏消息，一旦用户点击通知栏消息，APP就会被激活至前台，从而引导用户使用APP</li>
+<li>用户规模 DAU：50万 推送目标用户总量500万</li>
+<li>制定了客户端的推送Payload接口格式</li>
+<li>制定了推送相关Pingback回执格式</li>
+<li>根据pingback回执日志，进行Push相关的统计工作</li>
+<li>根据pingback回执日志，收集并更新客户端Pushid集合</li>
+<li>推送相关的客户端、前端、后端、运营的协调以及问题排查工作</li>
+<li>参与推送通道调研及推送整体架构设计</li>
+</ul>
+<h4>“今日十大热点”个性化推送CTR预估模型</h4>
+<ul>
+<li>功能：计算用户-文章对的CTR预估评分</li>
+<li>使用编程语言：<strong>Python、Shell</strong></li>
+<li>使用基于<strong>Tensorflow</strong>构建的<strong>Wide&amp;Deep</strong>模型</li>
+<li>使用<strong>Spark</strong>进行训练数据的分布式预处理，完成特征提取并将特征处理成<strong>TFRecord</strong>格式</li>
+<li>使用GPU训练模型，训练过程使用了动态学习率</li>
+<li>使用Spark加载Tensorflow模型实现分布式CTR评分预测流程，当Tensorflow模型结构发生变化时，无需修改预测流程代码</li>
+</ul>
+<h4>“今日十大热点”个性化推送服务</h4>
+<ul>
+<li>功能：收到推送指令后，为每一个用户选择目前CTR预估评分最高的文章，根据文章聚合用户，并把每一篇文章的推送用户集合提交至推送平台进行推送</li>
+<li>使用编程语言：<strong>Python3</strong></li>
+<li>工作流程：为每个用户维护一个优先队列，接收CTR预估模型计算的文章评分，并将该文章评分插入到对应用户的优先队列中，评分最高的文章在队首。每当收到推送指令时，取出每个用户的队首文章，按文章聚合提交推送</li>
+<li>优先队列使用<strong>Redis</strong>的<strong>Sorted Set</strong>结构实现</li>
+<li>Restful接口服务使用Python3下的<strong>Sanic</strong>框架</li>
+<li>为了保证推送速度，使用<strong>Celery</strong>框架提供的生产者-消费者模式来分布式获取每个用户的队首元素，使发送速度达到了100万用户/分钟</li>
 </ul>
 <h4>“搜狗搜索”文字搜索个性化“猜你想搜”个性化后端流程维护</h4>
 <ul>
