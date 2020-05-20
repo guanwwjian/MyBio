@@ -14,8 +14,8 @@
 - 共3年工作经验
 - 1年大数据工程师工作经验（数据中台）
 - 2年大数据算法工程师工作经验（个性化推送相关）
-- 技术涉及面广
-- 创新能力强
+- 善于学习新技术
+- 认真负责
 
 ---
 
@@ -41,8 +41,8 @@ table th:first-of-type {
 
 - 编程语言：
 	- 掌握：**Python、Linux Shell**
-	- 熟悉：**Java、SQL**
-- IDE：**vim**
+	- 熟悉：**Java、Scala、SQL**
+- IDE：能够使用**vim**及其他IDE
 - 大数据处理：**Spark**（数据中台、个性化推送模型预测流程）、**Hadoop Streaming**（日志清洗）、**Hive**（数据统计）、**Celery**
 - 机器学习：**TensorFlow**（Wide&Deep CTR预估模型）、**Spark ML**
 - 测试：熟悉**Python Unit Test**的开发，了解**ETL的数据质量QA**
