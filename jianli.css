@@ -266,6 +266,9 @@ table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
 	border-top: 0
 }
+table th:first-of-type {
+	width: 200px;
+}
 table tbody+tbody {
 	border-top: 2px solid #ddd
 }

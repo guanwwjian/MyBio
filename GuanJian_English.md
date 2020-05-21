@@ -18,13 +18,6 @@ Jim Guan/关键
 ---
 
 ### Education and Work Experience：
-<html>
-<style>
-table th:first-of-type {
-	width: 200px;
-}
-</style>
-</html>
 
 |2017.4 ~|Sogou|Big Data Algorithm Engineer|
 |:---|:---:|---:|
