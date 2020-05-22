@@ -44,9 +44,6 @@
 - 数据库：**Redis、ElasticSearch、PostgreSQL、MySQL、SQLite**
 - 容器：**Docker**
 - 代码版本管理：熟悉基于**git**的多人协作工作模式
-- Restful接口服务: **Sanic**（个性化推送服务）、**Flask**
-- Restful接口服务部署相关：**nginx、PM2、expect**
-- 数据统计及可视化：**Kylin、Redash**
 - **大学英语六级**
 - 了解国内推送技术现状及部分细节
 
