@@ -11,7 +11,7 @@ Jim Guan/关键
 ---
 
 ### About Me
-- With 2 years work experience as a Big Data Algorithm Engineer related to personalized push notification
+- With 3 years work experience as a Big Data Engineer related to personalized push notification
 - With wide-ranging professional skills
 - Good at innovate
 
@@ -49,7 +49,7 @@ table th:first-of-type {
 - AWS: **S3、Cognito、ElasticSearch Service、API Gateway**
 - Database: **Redis、ElasticSearch、Citus、MySQL、SQLite**
 - Container: **Docker**
-- Code Version Management: **git**
+- Code Version Management: **Git**
 - Restful interface framework: **Sanic** (personalized push service)
 - Restful interface service deployment tools: **nginx, PM2, expect**
 - Statistics and visualization: **Kylin, Redash**
