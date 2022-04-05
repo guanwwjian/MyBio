@@ -11,7 +11,7 @@ Jim Guan/关键
 ---
 
 ### About Me
-- With 3 years work experience as a Big Data Engineer related to personalized push notification
+- With 3 years work experience as a Big Data Engineer
 - With wide-ranging professional skills
 - Good at innovate
 
