@@ -26,8 +26,9 @@ table th:first-of-type {
 </style>
 </html>
 
-|2017.4 ~|Sogou|Big Data Algorithm Engineer|
+|2019.4 ~ 2020.4|App Annie|Big Data Engineer|
 |:---|:---:|---:|
+|2017.4 ~ 2019.3|Sogou|Big Data Algorithm Engineer|
 |2016.6 ~ 2016.12|SAP|Java Development Intern|
 |2014.9 ~ 2017.4|Beijing Institute of Technology|Master of Computer Science and Technology|
 |2010.9 ~ 2014.7|Tongji University|Bachelor of Computer Science and Technology|
@@ -36,18 +37,22 @@ table th:first-of-type {
 
 ### Professional Skills
 
+- English skill: **IELTS Score: 6**, **CET-6**
 - Programming languages:
 	- Master the technology of **Python** and **Linux Shell**
 	- Know all about the technology of **Java** and **SQL**
 - IDE: **vim**
-- Big data processing: **Spark** (Using in prediction process for personalized push notification), **Hadoop Streaming** (Using in log cleaning), **Hive** (Using in data statistics), **Celery**
-- Machine Learning: **TensorFlow** (Using in Wide & Deep CTR estimation Model), **Spark ML**
-- Database: **Redis, MySQL, SQLite**
+- Big data processing: **Spark** (Data Center Manage System, Prediction System for Personalized Push Notification), **Hadoop Streaming** (log cleaning), **Hive** (data statistics), **Celery**
+- Machine Learning: **TensorFlow** (Wide & Deep CTR estimation Model), **Spark ML**
+- Testing: Familiar with **Python Unit Test** related programming, know about data ETL related QA(Quality Assurance)
+- Workflow: Familiar with **Scrum** workflow
+- AWS: **S3、Cognito、ElasticSearch Service、API Gateway**
+- Database: **Redis、ElasticSearch、Citus、MySQL、SQLite**
+- Container: **Docker**
+- Code Version Management: **git**
 - Restful interface framework: **Sanic** (personalized push service)
 - Restful interface service deployment tools: **nginx, PM2, expect**
 - Statistics and visualization: **Kylin, Redash**
-- English skill: **CET-6**
-- Understand the status and details of push technology in China
 
 ---
 
